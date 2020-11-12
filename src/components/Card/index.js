@@ -1,10 +1,10 @@
 import React from "react";
-import "./Card.style.scss"
+import {StyledCardWrapper, StyledText} from "./Card.style"
 
 export const Card = () => {
     return (
-        <div className="card-wrapper">
-            <p>CARD</p>
-        </div>
+        <StyledCardWrapper>
+            <StyledText>CARD</StyledText>
+        </StyledCardWrapper>
     )
 }
