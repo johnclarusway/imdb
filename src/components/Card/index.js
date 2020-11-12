@@ -1,4 +1,3 @@
-import React from "react";
 import {StyledCardWrapper, StyledText} from "./Card.style"
 
 export const Card = () => {
