@@ -15,11 +15,16 @@ export const CardList = () => {
                 query:'Star Wars' //TODO: from input
             }
         })
-        .then((res) => setMovieData(res.data))
+        .then((res) => setMovieData(res.data.results))
         .catch((err) => console.log(err))
     },[])
-console.log(movieData);
     return (
-        <Card/>
+        <>
+            { movieData && movieData.map(movie =>{
+                return <Card title={movie.title}/>
+            } )
+                
+            }
+        </>
     )
 }
