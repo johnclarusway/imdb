@@ -13,7 +13,7 @@ const baseImageUrl = "https://image.tmdb.org/t/p/w500";
 function App() {
 
   const [movieList, setMovieList] = useState([]);
-  const [searchKeyword, setSearchKeyword] = useState("")
+  const [searchKeyword, setSearchKeyword] = useState("Matrix")
 
   useEffect(()=>{
       axios.get(
