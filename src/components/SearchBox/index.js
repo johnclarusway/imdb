@@ -1,10 +1,13 @@
-import {StyledSearchBox} from "./SearchBox.style"
+import {useState} from 'react';
+import {StyledSearchBox, StyledSearchInput, StyledSearchButton} from "./SearchBox.style"
 
-export const SearchBox = () => {
+export const SearchBox = ({setSearchKeyword}) => {
+    const [inputValue, setInputValue] = useState("");
+    
     return (
         <StyledSearchBox>
-           <input />
-           <button onClick={()=>{}}>Search</button> 
+           <StyledSearchInput isColored={false} onChange={(e)=>setInputValue(e.target.value)}/>
+           <StyledSearchButton onClick={()=>setSearchKeyword(inputValue)}>Search</StyledSearchButton> 
         </StyledSearchBox>
     )
 }

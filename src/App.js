@@ -13,23 +13,24 @@ const baseImageUrl = "https://image.tmdb.org/t/p/w500";
 function App() {
 
   const [movieList, setMovieList] = useState([]);
+  const [searchKeyword, setSearchKeyword] = useState("")
 
   useEffect(()=>{
       axios.get(
           baseUrl, {params: {
           api_key: apiKey,
           page: 1,
-          query: "Star Wars"  //TODO: from input
+          query: searchKeyword
           }}
       )
       .then((res)=> setMovieList(res?.data?.results))
       .catch()
       .finally()
-  },[])
+  },[searchKeyword])
 
   return (
     <div className="App">
-      <SearchBox/>
+      <SearchBox setSearchKeyword={setSearchKeyword}/>
       <CardList movieList={movieList} baseImageUrl={baseImageUrl} />
     </div>
   );
