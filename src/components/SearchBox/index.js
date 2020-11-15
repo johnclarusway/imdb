@@ -1,5 +1,5 @@
 import {useRef, useContext} from 'react';
-import {MovieContext} from "../../App";
+import {MovieContext} from "../../Movie";
 import {StyledSearchBox, StyledSearchInput, StyledSearchButton} from "./SearchBox.style";
 
 export const SearchBox = () => {

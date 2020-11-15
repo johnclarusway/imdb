@@ -1,6 +1,6 @@
 import {useContext} from 'react';
 import {Card} from "../Card";
-import {MovieContext} from "../../App";
+import {MovieContext} from "../../Movie";
 import {StyledCardList} from "./CardList.style"
 
 export const CardList = () => {
