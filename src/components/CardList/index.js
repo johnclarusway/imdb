@@ -12,6 +12,7 @@ export const CardList = () => {
                <Card 
                 key={index} 
                 title={movie.title}
+                id={movie.id}
                 imgSrc={baseImageUrl + movie.poster_path}
                 />)
             )}
