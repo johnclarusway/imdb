@@ -7,7 +7,7 @@ export const Card = ({title, imgSrc, id, poster_path}) => {
         <StyledCardWrapper onClick={() => history.push(`/detail/${id}`)}>
         {
             poster_path ?
-            <StyledMovieImage src={imgSrc} alt={"Movie Poster"} /> :
+            <StyledMovieImage src={imgSrc + poster_path} alt={"Movie Poster"} /> :
             <StyledMovieImage src='https://via.placeholder.com/113x170.png?text=No+Image' alt={"No Poster"} />
         }
             <StyledText>{title}</StyledText>
